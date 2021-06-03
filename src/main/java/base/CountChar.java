@@ -30,11 +30,8 @@ public class CountChar {
         System.out.print("What is the input string? ");
 
         String inputString = input.nextLine();
-        int stringLength = myInput.stringCounting(inputString);
+        int stringLength = inputString.length();
         System.out.format("%s has %d characters.", inputString, stringLength);
     }
 
-    public int stringCounting(String inputString) {
-        return inputString.length();
-    }
 }
