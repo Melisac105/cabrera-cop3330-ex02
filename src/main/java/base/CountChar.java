@@ -1,4 +1,8 @@
-/* Exercise 2 - Counting the Number of Characters
+/*
+UCF COP3330 Summer 2021 Assignment 1 Solution
+Copyright 2021 Melissa Cabrera
+
+Exercise 2 - Counting the Number of Characters
 Create a program that prompts for an input string and displays output that shows the input string and the number of characters the string contains.
 
 Example Output
@@ -26,12 +30,20 @@ public class CountChar {
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        CountChar myInput = new CountChar();
-        System.out.print("What is the input string? ");
+        CountChar myCount = new CountChar();
 
-        String inputString = input.nextLine();
-        int stringLength = inputString.length();
-        System.out.format("%s has %d characters.", inputString, stringLength);
+        String inputString = myCount.readInput();
+        int length = myCount.stringLength(inputString);
+        System.out.format("%s has %d characters.", inputString, length);
+    }
+
+    public String readInput() {
+        System.out.print("What is the input string? ");
+        return input.nextLine();
+    }
+
+    public int stringLength(String usrInput) {
+        return usrInput.length();
     }
 
 }
